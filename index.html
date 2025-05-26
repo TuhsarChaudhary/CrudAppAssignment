@@ -10,20 +10,20 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 10px; /* Base padding, adjusted for responsiveness later */
+            padding: 10px; 
             background-color: #f4f4f4;
             color: #333;
-            display: flex; /* Helps in centering the container if needed */
-            justify-content: center; /* Centers container horizontally */
-            min-height: 100vh; /* Ensures body takes at least full viewport height */
+            display: flex; 
+            justify-content: center; 
+            min-height: 100vh; 
         }
 
         .container {
-            width: 100%; /* Take full width up to max-width */
-            max-width: 800px; /* Limits container width on larger screens */
-            margin: 20px auto; /* Vertical margin and auto horizontal for centering */
+            width: 100%; 
+            max-width: 800px; 
+            margin: 20px auto; 
             background: #fff;
-            padding: 15px; /* Base padding */
+            padding: 15px; 
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
@@ -53,7 +53,6 @@
             font-weight: bold;
         }
 
-        /* Input fields take full width and box-sizing handles padding/border */
         .form-group input[type="text"],
         .form-group input[type="email"],
         .form-group input[type="number"] {
@@ -61,7 +60,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Crucial for width: 100% to include padding and border */
+            box-sizing: border-box; 
         }
 
         /* --- Button Styling --- */
@@ -75,8 +74,8 @@
             text-decoration: none;
             font-size: 1em;
             margin-right: 5px;
-            margin-bottom: 5px; /* For stacking on smaller screens if they wrap */
-            transition: opacity 0.2s ease-in-out; /* Smooth hover effect */
+            margin-bottom: 5px; 
+            transition: opacity 0.2s ease-in-out; 
         }
 
         .btn:hover {
@@ -85,21 +84,21 @@
 
         .btn-primary { background: #007bff; }
         .btn-danger  { background: #dc3545; }
-        .btn-warning { background: #ffc107; color: #212529; } /* Dark text for yellow button */
+        .btn-warning { background: #ffc107; color: #212529; } 
         .btn-secondary{ background: #6c757d; }
 
         /* --- Table Styling --- */
         .table-responsive-wrapper {
-            overflow-x: auto; /* Enables horizontal scrolling for the table on small screens */
-            margin-bottom: 20px; /* Space below the table */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            overflow-x: auto; 
+            margin-bottom: 20px; 
+            -webkit-overflow-scrolling: touch; 
         }
 
         .user-table {
             width: 100%;
-            border-collapse: collapse; /* Removes space between table cells */
+            border-collapse: collapse; 
             margin-top: 20px;
-            /* min-width: 500px; /* Optional: Set a min-width if you want scrolling to start at a specific table width */
+           /*min-width: 500px;  */
         }
 
         .user-table th,
@@ -112,36 +111,36 @@
         .user-table th {
             background-color: #007bff;
             color: white;
-            white-space: nowrap; /* Prevents table headers from wrapping too early */
+            white-space: nowrap; 
         }
 
         .user-table tr:nth-child(even) {
-            background-color: #f9f9f9; /* Zebra striping for readability */
+            background-color: #f9f9f9; 
         }
 
         .user-table tr:hover {
-            background-color: #f1f1f1; /* Highlight row on hover */
+            background-color: #f1f1f1; 
         }
 
         .actions-cell {
-            white-space: nowrap; /* Ensures Edit/Delete buttons stay on one line if possible */
+            white-space: nowrap; 
         }
 
         /* --- Search Bar Styling --- */
         .search-container {
             margin-bottom: 20px;
             display: flex;
-            flex-direction: column; /* Stack label and input by default for mobile */
+            flex-direction: column; 
             align-items: flex-start;
         }
 
         .search-container label {
-            margin-bottom: 5px; /* Space between label and input when stacked */
+            margin-bottom: 5px; 
             font-weight: bold;
         }
 
         .search-container input[type="text"] {
-            width: 100%; /* Full width for mobile */
+            width: 100%; 
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -154,14 +153,14 @@
             margin-bottom: 15px;
             padding: 10px;
             border: 1px solid red;
-            background-color: #ffebeb; /* Light red background for error summary */
+            background-color: #ffebeb; 
             border-radius: 4px;
-            display: none; /* Hidden by default, shown by JavaScript */
+            display: none; 
         }
 
         #validationSummary ul {
-            margin: 0; /* Remove default ul margin */
-            padding-left: 20px; /* Indent error list items */
+            margin: 0; 
+            padding-left: 20px; 
         }
 
         /* --- Media Queries for Responsiveness --- */
@@ -169,41 +168,41 @@
         /* Styles for tablets and larger screens (600px and up) */
         @media (min-width: 600px) {
             body {
-                padding: 20px; /* More padding on larger screens */
+                padding: 20px; 
             }
             .container {
-                padding: 20px; /* More padding inside container */
+                padding: 20px; 
             }
             .search-container {
-                flex-direction: row; /* Align search label and input side-by-side */
+                flex-direction: row; 
                 align-items: center;
             }
             .search-container label {
-                margin-right: 10px; /* Space between label and input */
-                margin-bottom: 0; /* Remove bottom margin as they are in a row */
+                margin-right: 10px; 
+                margin-bottom: 0; 
             }
             .search-container input[type="text"] {
-                flex-grow: 1; /* Allows search input to take available space */
-                /* width: auto; /* Or set a specific width if preferred, e.g., width: 300px; */
+                flex-grow: 1; 
+                /* width: auto; /* 
             }
         }
 
         /* Styles for very small screens (max-width 480px) */
         @media (max-width: 480px) {
             .actions-cell .btn {
-                display: block; /* Stack Edit/Delete buttons vertically */
-                width: calc(100% - 10px); /* Full width minus some margin/padding adjustment */
+                display: block; 
+                width: calc(100% - 10px); 
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
             }
             .actions-cell .btn:not(:last-child) {
-                margin-bottom: 8px; /* Space between stacked buttons */
+                margin-bottom: 8px; 
             }
              .user-table th,
              .user-table td {
-                padding: 8px; /* Reduce padding in table cells for small screens */
-                font-size: 0.9em; /* Slightly smaller font to fit more content */
+                padding: 8px; 
+                font-size: 0.9em; 
             }
         }
     </style>
@@ -218,32 +217,30 @@
         <div class="user-form">
             <h2>Add / Update User</h2>
             <form id="userForm">
-                <!-- Hidden input to store the ID of the user being edited -->
-                <input type="hidden" id="userId">
 
-                <!-- Container for displaying form validation errors -->
+                <input type="hidden" id="userId">
+                
                 <div id="validationSummary">
                     <h4>Please correct the following errors:</h4>
                     <ul id="errorList"></ul>
                 </div>
 
-                <!-- Form group for Name -->
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" required>
                 </div>
-                <!-- Form group for Email -->
+        
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" required>
                 </div>
-                <!-- Form group for Age -->
+            
                 <div class="form-group">
                     <label for="age">Age:</label>
-                    <input type="number" id="age" required min="1"> <!-- Age must be at least 1 -->
+                    <input type="number" id="age" required min="1"> 
                 </div>
 
-                <!-- Form action buttons -->
+            
                 <button type="submit" class="btn btn-primary" id="submitButton">Add User</button>
                 <button type="button" class="btn btn-secondary" id="clearButton" style="display: none;">Cancel Edit</button>
             </form>
@@ -268,32 +265,30 @@
                     </tr>
                 </thead>
                 <tbody id="userTableBody">
-                    <!-- User data rows will be dynamically inserted here by JavaScript -->
+                    <! User data rows will be dynamically inserted here by JavaScript >
                 </tbody>
             </table>
         </div>
     </div>
 
     <script>
-        // Wait for the HTML document to be fully loaded and parsed before running the script
+        
         document.addEventListener('DOMContentLoaded', () => {
             // --- DOM Element References ---
-            // Get references to various HTML elements to interact with them
             const userForm = document.getElementById('userForm');
             const submitButton = document.getElementById('submitButton');
-            const clearButton = document.getElementById('clearButton'); // Button to cancel editing
-            const userIdInput = document.getElementById('userId');     // Hidden input for user ID during edit
+            const clearButton = document.getElementById('clearButton'); 
+            const userIdInput = document.getElementById('userId');     
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const ageInput = document.getElementById('age');
-            const userTableBody = document.getElementById('userTableBody'); // tbody for user list
+            const userTableBody = document.getElementById('userTableBody'); 
             const searchInput = document.getElementById('searchInput');
-            const validationSummary = document.getElementById('validationSummary'); // Div for error messages
-            const errorList = document.getElementById('errorList');         // UL inside validationSummary
+            const validationSummary = document.getElementById('validationSummary'); 
+            const errorList = document.getElementById('errorList');         
 
             // --- Data Storage ---
-            // Attempt to load users from localStorage; if none exist, initialize as an empty array.
-            // This ensures data persistence across page reloads.
+
             let users = JSON.parse(localStorage.getItem('users')) || [];
             let editingUserId = null; // Stores the ID of the user currently being edited, null if adding a new user.
 
@@ -304,9 +299,8 @@
              * @param {Array} [usersToRender=users] - The array of user objects to display. Defaults to the global 'users' array.
              */
             const renderTable = (usersToRender = users) => {
-                userTableBody.innerHTML = ''; // Clear any existing rows from the table
+                userTableBody.innerHTML = ''; 
 
-                // If there are no users to display, show a message in the table
                 if (usersToRender.length === 0) {
                     const row = userTableBody.insertRow();
                     const cell = row.insertCell();
@@ -316,27 +310,22 @@
                     return;
                 }
 
-                // Iterate over each user and create a table row for them
                 usersToRender.forEach(user => {
-                    const row = userTableBody.insertRow(); // Create a new <tr> element
+                    const row = userTableBody.insertRow(); 
 
-                    // Create and append cells (<td>) for user data
                     row.insertCell().textContent = user.name;
                     row.insertCell().textContent = user.email;
                     row.insertCell().textContent = user.age;
 
-                    // Create the 'Actions' cell with Edit and Delete buttons
                     const actionsCell = row.insertCell();
-                    actionsCell.classList.add('actions-cell'); // For specific styling
+                    actionsCell.classList.add('actions-cell'); 
 
-                    // Create Edit button
                     const editButton = document.createElement('button');
                     editButton.textContent = 'Edit';
-                    editButton.classList.add('btn', 'btn-warning'); // Apply CSS classes
-                    editButton.addEventListener('click', () => startEditUser(user.id)); // Attach click handler
+                    editButton.classList.add('btn', 'btn-warning'); 
+                    editButton.addEventListener('click', () => startEditUser(user.id)); 
                     actionsCell.appendChild(editButton);
 
-                    // Create Delete button
                     const deleteButton = document.createElement('button');
                     deleteButton.textContent = 'Delete';
                     deleteButton.classList.add('btn', 'btn-danger');
@@ -361,41 +350,38 @@
                 const name = nameInput.value.trim();
                 const email = emailInput.value.trim();
                 const age = ageInput.value.trim();
-                let errors = []; // Array to store validation error messages
-                errorList.innerHTML = ''; // Clear previous error messages
+                let errors = []; 
+                errorList.innerHTML = ''; 
 
-                // Name validation
                 if (!name) {
                     errors.push("Name is required.");
                 }
 
-                // Email validation
                 if (!email) {
                     errors.push("Email is required.");
                 } else if (!/^\S+@\S+\.\S+$/.test(email)) { // Simple regex for email format
                     errors.push("Please enter a valid email address.");
                 }
 
-                // Age validation
                 if (!age) {
                     errors.push("Age is required.");
                 } else if (isNaN(age) || parseInt(age, 10) <= 0) {
                     errors.push("Please enter a valid age (must be a positive number).");
                 }
 
-                // If there are errors, display them and return false
+                // for errors
                 if (errors.length > 0) {
                     errors.forEach(error => {
                         const li = document.createElement('li');
                         li.textContent = error;
                         errorList.appendChild(li);
                     });
-                    validationSummary.style.display = 'block'; // Show the error summary
+                    validationSummary.style.display = 'block'; 
                     return false;
                 }
 
-                validationSummary.style.display = 'none'; // Hide error summary if no errors
-                return true; // Form is valid
+                validationSummary.style.display = 'none'; 
+                return true; 
             };
 
             /**
@@ -403,37 +389,36 @@
              * @param {Event} event - The form submission event object.
              */
             const handleFormSubmit = (event) => {
-                event.preventDefault(); // Prevent the default form submission (page reload)
+                event.preventDefault(); 
 
-                // Validate the form; if invalid, stop processing
                 if (!validateForm()) {
                     return;
                 }
 
                 const name = nameInput.value.trim();
                 const email = emailInput.value.trim();
-                const age = parseInt(ageInput.value, 10); // Convert age to a number
+                const age = parseInt(ageInput.value, 10); 
 
                 if (editingUserId !== null) {
                     // --- Update existing user ---
                     const userIndex = users.findIndex(user => user.id === editingUserId);
                     if (userIndex > -1) { // Check if user was found
-                        users[userIndex] = { ...users[userIndex], name, email, age }; // Update user details
+                        users[userIndex] = { ...users[userIndex], name, email, age }; 
                     }
                 } else {
                     // --- Add new user ---
                     const newUser = {
-                        id: Date.now(), // Use timestamp as a simple unique ID
+                        id: Date.now(), 
                         name,
                         email,
                         age
                     };
-                    users.push(newUser); // Add the new user to the array
+                    users.push(newUser); 
                 }
 
-                saveUsersToLocalStorage(); // Persist changes
-                renderTable();             // Refresh the user list display
-                resetForm();               // Clear the form and reset its state
+                saveUsersToLocalStorage(); 
+                renderTable();             
+                resetForm();               
             };
 
             /**
@@ -441,22 +426,20 @@
              * @param {number} userId - The ID of the user to be edited.
              */
             const startEditUser = (userId) => {
-                const userToEdit = users.find(user => user.id === userId); // Find the user in the array
+                const userToEdit = users.find(user => user.id === userId); 
                 if (userToEdit) {
-                    // Populate form fields with the user's current data
-                    userIdInput.value = userToEdit.id; // Store ID (though not directly used by user)
+                    userIdInput.value = userToEdit.id; 
                     nameInput.value = userToEdit.name;
                     emailInput.value = userToEdit.email;
                     ageInput.value = userToEdit.age;
 
-                    // Change form state to 'Update' mode
                     submitButton.textContent = 'Update User';
                     submitButton.classList.remove('btn-primary');
                     submitButton.classList.add('btn-warning');
-                    clearButton.style.display = 'inline-block'; // Show the 'Cancel Edit' button
-                    editingUserId = userId; // Set the global editing state
-                    nameInput.focus(); // Focus on the name field for better UX
-                    validationSummary.style.display = 'none'; // Hide any previous validation errors
+                    clearButton.style.display = 'inline-block'; 
+                    editingUserId = userId; 
+                    nameInput.focus(); 
+                    validationSummary.style.display = 'none'; 
                 }
             };
 
@@ -465,14 +448,12 @@
              * @param {number} userId - The ID of the user to be deleted.
              */
             const deleteUser = (userId) => {
-                // Confirm with the user before deleting
                 if (confirm('Are you sure you want to delete this user?')) {
-                    // Filter out the user to be deleted from the 'users' array
+                
                     users = users.filter(user => user.id !== userId);
-                    saveUsersToLocalStorage(); // Persist the change
-                    renderTable();             // Refresh the table display
-
-                    // If the user being deleted was also the one being edited, reset the form
+                    saveUsersToLocalStorage(); 
+                    renderTable();            
+                    
                     if (editingUserId === userId) {
                         resetForm();
                     }
@@ -480,18 +461,18 @@
             };
 
             /**
-             * Resets the form fields and its state to 'Add User' mode.
+             * Resets the form fields 
              */
             const resetForm = () => {
-                userForm.reset(); // Clears all input fields in the form
-                userIdInput.value = ''; // Clear the hidden ID field
-                submitButton.textContent = 'Add User'; // Reset button text
+                userForm.reset(); 
+                userIdInput.value = ''; 
+                submitButton.textContent = 'Add User'; 
                 submitButton.classList.remove('btn-warning');
                 submitButton.classList.add('btn-primary');
-                clearButton.style.display = 'none'; // Hide 'Cancel Edit' button
-                editingUserId = null; // Clear editing state
-                validationSummary.style.display = 'none'; // Hide validation messages
-                errorList.innerHTML = ''; // Clear error list items
+                clearButton.style.display = 'none'; 
+                editingUserId = null; // 
+                validationSummary.style.display = 'none'; 
+                errorList.innerHTML = ''; 
             };
 
             /**
@@ -499,30 +480,26 @@
              * Search is performed on the user's name (case-insensitive).
              */
             const handleSearch = () => {
-                const searchTerm = searchInput.value.toLowerCase().trim(); // Get and normalize search term
+                const searchTerm = searchInput.value.toLowerCase().trim(); 
 
-                // If search term is empty, show all users
                 if (!searchTerm) {
                     renderTable(users);
                     return;
                 }
 
-                // Filter users whose name includes the search term
                 const filteredUsers = users.filter(user =>
                     user.name.toLowerCase().includes(searchTerm)
                 );
-                renderTable(filteredUsers); // Render the table with filtered results
+                renderTable(filteredUsers); 
             };
 
 
             // --- Event Listeners ---
-            // Attach event listener for form submission
+
             userForm.addEventListener('submit', handleFormSubmit);
 
-            // Attach event listener for the 'Cancel Edit' button
             clearButton.addEventListener('click', resetForm);
 
-            // Attach event listener for the search input (fires on each key press)
             searchInput.addEventListener('input', handleSearch);
 
             // --- Initial Page Load ---
